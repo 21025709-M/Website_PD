@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/uqk1uwm.css" />
+    <script src="javascript/javascript.js"></script>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <!-- <div class="container">
+      <h1>Welcome</h1>
+    </div> -->
+
+    <!-- about Section -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/Me-image.png" />
+          </div>
+          <div class="about-col-2">
+            <h2 class="sub-title">About Me</h2>
+            <p>
+              Lorem ipsum dolor sit amet. Est deleniti maiores in labore
+              molestias ut consequatur molestias eum libero corrupti ut harum
+              corporis et corporis nesciunt. Et iure quibusdam eos consequatur
+              magnam qui quas magni rem nisi saepe qui officia sint. Et rerum
+              ipsum qui rerum autem ad modi dignissimos eum quia nihil
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                <li><span>Web Development</span><br>Web App Development</li>
+                <li><span>App Development</span><br>Building Android/iOS apps</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>experience?</span><br>I have none! HiRe mE!!!</li>
+                <!-- <li><span>Web Development</span><br>Web App Development</li>
+                <li><span>App Development</span><br>Building Android/iOS apps</li> -->
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2021 - 2024 (current)</span><br>Diploma in Digital Design and Development at Republic Polytechnic</li>
+                <!-- <li><span>Web Development</span><br>Web App Development</li>
+                <li><span>App Development</span><br>Building Android/iOS apps</li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for(tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+      }
+    </script>
+
+    <div id="footer-container"></div>
+  </body>
+</html>
